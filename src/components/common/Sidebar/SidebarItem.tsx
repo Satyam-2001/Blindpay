@@ -8,19 +8,18 @@ interface SidebarItemProps {
   // Define your props here
 }
 
+export const sidebarMainClass =
+  "flex h-[40px] items-center gap-3 rounded px-3 py-[10px] text-sm font-normal text-zinc-700";
+export const sidebarHoverClass =
+  "hover:bg-zinc-100 hover:text-zinc-950 group-[.is-active]:bg-zinc-100 group-[.is-active]:text-zinc-950 cursor-pointer";
+
 const SidebarItem: React.FC<SidebarItemProps> = ({
   label,
   Icon,
   hoverEffect = true,
 }) => {
   return (
-    <div
-      className={cn(
-        "flex h-[40px] items-center gap-3 rounded px-3 py-[10px] text-sm font-normal text-zinc-700",
-        hoverEffect &&
-          "hover:bg-zinc-100 hover:text-zinc-950 group-[.is-active]:bg-zinc-100 group-[.is-active]:text-zinc-950 cursor-pointer"
-      )}
-    >
+    <div className={cn(sidebarMainClass, hoverEffect && sidebarHoverClass)}>
       <div className="flex h-5 w-5 items-center justify-center">{Icon}</div>
       <div className="flex-1">{label}</div>
     </div>

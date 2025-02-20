@@ -16,7 +16,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
         </a>
         <SidebarItem label="Search" Icon={<SearchIcon />} hoverEffect={false} />
       </div>
-      <div className="w-full p-3 flex-1">{children}</div>
+      <div className="flex flex-col w-full p-3 flex-1">{children}</div>
     </aside>
   );
 };
