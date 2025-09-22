@@ -7,6 +7,7 @@ interface SidebarProps {
   children?: ReactNode;
 }
 
+
 const Sidebar: React.FC<SidebarProps> = ({ children }) => {
   return (
     <aside className="fixed -left-[270px] top-0 z-20 flex h-full w-[270px] min-w-[270px] flex-col overflow-hidden overflow-y-auto border-r border-solid border-zinc-200 bg-white transition-all md:relative md:left-0 md:z-10 md:bg-inherit">
